@@ -77,3 +77,6 @@
 # Structs should implement `Zeroable` when all of their fields do.
 --with-derive-custom-struct .*=MaybeZeroable
 --with-derive-custom-union .*=MaybeZeroable
+
+# sword local build (clang 22, bindgen 0.72.1): efi_guid_t typedef alignment is lost in Rust layout tests
+--opaque-type efi_signature_data_t
